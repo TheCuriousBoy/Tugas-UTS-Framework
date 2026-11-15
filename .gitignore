@@ -1,0 +1,10 @@
+/vendor/
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.env
+application/logs/*
+!application/logs/index.html
+application/cache/*
+!application/cache/index.html

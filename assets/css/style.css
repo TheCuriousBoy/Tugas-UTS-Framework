@@ -1,0 +1,69 @@
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f4f7fe;
+    color: #1e293b;
+}
+
+.fw-extrabold {
+    font-weight: 800;
+}
+
+.shadow-xs {
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+
+.bg-auth-gradient {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1d4ed8 100%);
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    width: 265px;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, #0f172a 0%, #1e3a8a 100%);
+    transition: margin 0.25s ease-out;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: -265px;
+}
+
+.nav-link-sidebar {
+    color: rgba(255, 255, 255, 0.78);
+    transition: all 0.18s ease;
+}
+
+.nav-link-sidebar:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.nav-link-sidebar.active {
+    color: #ffffff;
+    background-color: #2563eb;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+.text-xs {
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: -265px;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: 0;
+    }
+}
+
+@media print {
+    #sidebar-wrapper, .no-print {
+        display: none !important;
+    }
+    body {
+        background: #fff !important;
+    }
+}
